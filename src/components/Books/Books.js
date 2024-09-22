@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Table, Form, Button, Modal } from 'react-bootstrap';
+import '../../App.css';
 
 class Books extends React.Component {
 
@@ -125,7 +126,7 @@ class Books extends React.Component {
   // Método para renderizar a tabela de livros
   renderTabela() {
     return (
-      <Table striped bordered hover>
+      <Table striped bordered hover variant="dark" className="mt-3">
         <thead>
           <tr>
             <th>Titulo</th>
@@ -227,18 +228,28 @@ class Books extends React.Component {
 
   // Método renderiza o formulário e a tabela de livros
   render() {
+    const bg = {
+      overlay: {
+        background: "#FFFF00"
+      }
+    };
     return (
-      <div>
-        <Button variant="primary" onClick={this.abrirCadastro}>
+      <div className="bg-dark text-white p-3">
+        <div className="d-flex justify-content-end mb-3" style={{ marginTop: '20px', marginBottom: '20px' }}>
+        <Button variant="secondary" onClick={this.abrirCadastro} style={{ marginTop: '20px', marginBottom: '20px', marginRight: '20px' }}>
             Novo Livro
         </Button>
-
-      <Modal show={this.state.telaCadastro} onHide={this.fecharCadastro}>
+        <Button variant="secondary" onClick={this.abrirCadastro} style={{ marginTop: '20px', marginBottom: '20px', marginRight: '80px' }}>
+            Buscar Livro
+        </Button>
+       
+        </div>
+      <Modal show={this.state.telaCadastro} onHide={this.fecharCadastro}  className="modal-dark">
         <Modal.Header closeButton>
           <Modal.Title>Registro de Livro</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-        <Form>
+        <Form className="form-dark">
         <Form.Group className="mb-3" controlId="formGridId">
             <Form.Label></Form.Label>
             <Form.Control type="text" value={this.state.id} readOnly={true} style={{ backgroundColor: '#e9ecef', cursor: 'not-allowed' }} style={{ display: 'none' }}/>
@@ -266,10 +277,10 @@ class Books extends React.Component {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={this.fecharCadastro}>
+          <Button variant="secondary" onClick={this.fecharCadastro} style={{ marginLeft: '20px' }}>
             Fechar
           </Button>
-          <Button variant="primary" onClick={this.submit}>
+          <Button variant="primary" onClick={this.submit} style={{ marginLeft: '20px' }}>
             Salvar
           </Button>
         </Modal.Footer>

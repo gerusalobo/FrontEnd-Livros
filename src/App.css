@@ -1,0 +1,21 @@
+.form-dark {
+    background-color: #343a40; /* Cor de fundo escura */
+    color: white; /* Cor do texto */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+  }
+  
+  .form-dark .form-control {
+    background-color: #495057; /* Cor de fundo dos campos */
+    color: white; /* Cor do texto nos campos */
+    border: 1px solid #ced4da; /* Cor da borda dos campos */
+  }
+  
+  .form-dark .form-control::placeholder {
+    color: #adb5bd; /* Cor do placeholder */
+  }
+  .modal-dark .modal-content {
+    background-color: #343a40; /* Cor de fundo escura */
+    color: White; /* Cor do texto */
+  }
+  

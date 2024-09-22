@@ -1,34 +1,25 @@
+// App.js
 import './App.css';
 import Home from './components/Home/Home';
 import Sobre from './components/Sobre/Sobre';
 import Books from './components/Books/Books';
-import {BrowserRouter, Routes, Link, Route} from 'react-router-dom';
-import Nav from 'react-bootstrap/Nav';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Header from './components/Header/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 
 function App() {
   return (
     <div className="App">
-      <h1>Teste</h1>
-    <BrowserRouter>
-    <Nav variant="tabs" defaultActiveKey="/home">
-      <Nav.Link as={Link} to="/">Página Inicial</Nav.Link>
-      <Nav.Link as={Link} to="/Books">Livros</Nav.Link>
-      <Nav.Link as={Link} to="/Sobre">Sobre</Nav.Link>
-    </Nav>
-
-     <Routes>
-    <Route path="/" element={<Home/>}></Route>
-    <Route path="/Books" element={<Books/>}></Route>
-    <Route path="/Sobre" element={<Sobre/>}></Route>
-
-    </Routes>
-    </BrowserRouter>
-
-
+      <BrowserRouter>
+        <Header /> {/* O Header agora contém o título e as opções */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Books" element={<Books />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
 
 export default App;
+

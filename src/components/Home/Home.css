@@ -1,0 +1,25 @@
+/* Home.css */
+
+.home-container {
+    display: flex; /* Layout horizontal */
+    height: 100vh; /* Altura total da tela */
+  }
+  
+  .welcome-section {
+    flex: 0 0 50%; /* 40% da largura para a seção de boas-vindas */
+    background-color: rgb(30, 33, 35); /* Cor de fundo da seção de boas-vindas */
+    display: flex;
+    flex-direction: column; /* Coloca os elementos verticalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    padding: 20px; /* Espaçamento interno */
+  }
+  
+  .image-section {
+    flex: 0 0 50%; /* 60% da largura para a imagem */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: black; /* Cor de fundo da imagem */
+  }
+  

@@ -1,0 +1,33 @@
+/* Header.css */
+
+.header-container {
+    display: flex; /* Usa flexbox para layout horizontal */
+    background-color: black; /* Cor de fundo do Header */
+    padding: 10px; /* Espaçamento interno */
+  }
+  
+  .header-title {
+    flex: 0 0 60%; /* 60% da largura para o título */
+    color: white; /* Cor do texto do título */
+  }
+  
+  .header-nav {
+    flex: 0 0 40%; /* 40% da largura para a navegação */
+    display: flex;
+    justify-content: flex-end; /* Alinha os links à direita */
+  }
+  
+  .header-text {
+    margin: 0; /* Remove margens padrão */
+  }
+  
+  /* Estilo para os links da navegação */
+  .header-nav .nav-link {
+    color: white; /* Cor dos links */
+  }
+  
+  /* Estilo ao passar o mouse sobre os links */
+  .header-nav .nav-link:hover {
+    color: lightgray; /* Cor ao passar o mouse (opcional) */
+  }
+  
