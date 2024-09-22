@@ -10,7 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <div className="App">
-      <h1> teste</h1>
+      <h1>Teste</h1>
     <BrowserRouter>
     <Nav variant="tabs" defaultActiveKey="/home">
       <Nav.Link as={Link} to="/">Página Inicial</Nav.Link>

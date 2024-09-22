@@ -14,7 +14,7 @@ class Books extends React.Component {
       paginas: '',
       editora: '',
       books: [], // Armazena a lista de livros carregados do backend
-      telaCadastro: true
+      telaCadastro: false
     };
 
     // Vinculando o método submit ao contexto da classe para evitar problemas de escopo
@@ -63,6 +63,7 @@ class Books extends React.Component {
                     paginas: livro.paginas,
                     editora: livro.editora
              });
+             this.abrirCadastro();
           });
       }
 
@@ -220,6 +221,7 @@ class Books extends React.Component {
         paginas: '',
         editora: ''
       });
+    this.fecharCadastro();
   }
 
   // Método renderiza o formulário e a tabela de livros
@@ -263,7 +265,7 @@ class Books extends React.Component {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={this.fecharCadastro}>
+          <Button variant="secondary" onClick={this.reset}>
             Fechar
           </Button>
           <Button variant="primary" onClick={this.submit}>
