@@ -280,7 +280,7 @@ class Books extends React.Component {
   render() {
 
     return (
-      <div className="bg-dark text-white p-3" className="dark-theme p-3">
+      <div className="dark-theme p-3">
         <div className="d-flex justify-content-end mb-3" style={{ marginTop: '20px', marginBottom: '20px' }}>
         <Button variant="primary" onClick={this.abrirCadastro} style={{ marginTop: '20px', marginBottom: '20px', marginRight: '100px' }}>
             Novo Livro

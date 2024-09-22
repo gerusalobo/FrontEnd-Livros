@@ -1,7 +1,8 @@
 import React from 'react';
 import { Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import './Header.css'; // Importar seu CSS personalizado
+//import './Header.css'; // Importar seu CSS personalizado
+import '../../App.css';
 
 const Header = () => {
   return (

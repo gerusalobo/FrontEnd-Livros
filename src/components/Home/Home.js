@@ -1,7 +1,8 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom'; // Adicione esta linha para importar o Link
-import './Home.css'; // Certifique-se de que o CSS está importado corretamente
+//import './Home.css'; // Certifique-se de que o CSS está importado corretamente
+import '../../App.css';
 
 function Home() {
   return (
