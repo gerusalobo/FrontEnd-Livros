@@ -239,8 +239,8 @@ class Books extends React.Component {
         <Modal.Body>
         <Form>
         <Form.Group className="mb-3" controlId="formGridId">
-            <Form.Label>ID</Form.Label>
-            <Form.Control type="text" value={this.state.id} readOnly={true} style={{ backgroundColor: '#e9ecef', cursor: 'not-allowed' }}/>
+            <Form.Label></Form.Label>
+            <Form.Control type="text" value={this.state.id} readOnly={true} style={{ backgroundColor: '#e9ecef', cursor: 'not-allowed' }} style={{ display: 'none' }}/>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formGridNome">
             <Form.Label>Titulo</Form.Label>
