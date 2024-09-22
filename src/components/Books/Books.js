@@ -15,11 +15,22 @@ class Books extends React.Component {
       paginas: '',
       editora: '',
       books: [], // Armazena a lista de livros carregados do backend
-      telaCadastro: false
+      telaCadastro: false,
+      telaBusca: false,
+      nomeBusca: '',
+      autorBusca:''
     };
 
-    // Vinculando o método submit ao contexto da classe para evitar problemas de escopo
+    // Vinculando os métodos ao contexto da classe para evitar problemas de escopo
     this.submit = this.submit.bind(this);
+    this.submitBusca = this.submitBusca.bind(this);
+    this.getLivros = this.getLivros.bind(this); // Adicionar o bind aqui
+    this.fecharCadastro = this.fecharCadastro.bind(this);
+    this.fecharBusca = this.fecharBusca.bind(this); // Adicionar o bind aqui
+    this.abrirCadastro = this.abrirCadastro.bind(this);
+    this.abrirBusca = this.abrirBusca.bind(this);
+    this.reset = this.reset.bind(this);
+    this.resetBusca = this.resetBusca.bind(this);
   }
 
   // Método chamado automaticamente quando o componente é montado
@@ -29,8 +40,20 @@ class Books extends React.Component {
   }
 
   // Método para buscar os livros via requisição GET na API
-  getLivros() {
-    fetch('/livros', {
+  getLivros(nome = '', autor = '') {
+
+    let url = '/livros';
+  // Adiciona os parâmetros de busca se eles forem fornecidos
+    const params = new URLSearchParams();
+    if (nome) params.append('nome', nome);
+    if (autor) params.append('autor', autor);
+
+  // Adiciona os parâmetros à URL, se existirem
+    if (params.toString()) {
+    url += `?${params.toString()}`;
+  }
+
+    fetch(url, {
       method: 'GET',
       headers: {
         'Authorization': `Basic ${process.env.REACT_APP_API_TOKEN}`, // Autenticação via token armazenado
@@ -42,6 +65,7 @@ class Books extends React.Component {
         // Atualiza o estado com os dados recebidos
         this.setState({ books: dados });
       });
+      this.fecharBusca();
   }
 
     // Método para buscar os livros via requisição GET na API
@@ -202,6 +226,13 @@ class Books extends React.Component {
     this.fecharCadastro();
   }
 
+  submitBusca(e){
+    e.preventDefault();
+    const nomeB = this.state.nomeBusca; 
+    const autorB = this.state.autorBusca; 
+    this.getLivros(nomeB, autorB);
+  }
+
   fecharCadastro = () => {
     this.setState({
         telaCadastro: false
@@ -212,6 +243,18 @@ class Books extends React.Component {
   abrirCadastro = () => {
     this.setState({
         telaCadastro: true
+  });}
+
+  fecharBusca = () => {
+    this.setState({
+        telaBusca: false
+  });
+  }
+
+  abrirBusca = () => {
+    this.resetBusca();
+    this.setState({
+        telaBusca: true
   });}
 
   // Método para limpar os campos do formulário
@@ -226,21 +269,27 @@ class Books extends React.Component {
       });
   }
 
+  resetBusca = () => {
+    this.setState({
+        nomeBusca: '',
+        autorBusca: '',
+      });
+  }
+
   // Método renderiza o formulário e a tabela de livros
   render() {
-    const bg = {
-      overlay: {
-        background: "#FFFF00"
-      }
-    };
+
     return (
-      <div className="bg-dark text-white p-3">
+      <div className="bg-dark text-white p-3" className="dark-theme p-3">
         <div className="d-flex justify-content-end mb-3" style={{ marginTop: '20px', marginBottom: '20px' }}>
-        <Button variant="secondary" onClick={this.abrirCadastro} style={{ marginTop: '20px', marginBottom: '20px', marginRight: '20px' }}>
+        <Button variant="primary" onClick={this.abrirCadastro} style={{ marginTop: '20px', marginBottom: '20px', marginRight: '100px' }}>
             Novo Livro
         </Button>
-        <Button variant="secondary" onClick={this.abrirCadastro} style={{ marginTop: '20px', marginBottom: '20px', marginRight: '80px' }}>
+        <Button variant="secondary" onClick={this.abrirBusca} style={{ marginTop: '20px', marginBottom: '20px', marginRight: '20px' }}>
             Buscar Livro
+        </Button>
+        <Button variant="secondary" onClick={() => { this.getLivros(); this.fecharBusca(); }} style={{ marginTop: '20px', marginBottom: '20px', marginRight: '30px' }}>
+            Reset Busca
         </Button>
        
         </div>
@@ -282,6 +331,29 @@ class Books extends React.Component {
           </Button>
           <Button variant="primary" onClick={this.submit} style={{ marginLeft: '20px' }}>
             Salvar
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
+      <Modal show={this.state.telaBusca} onHide={this.fecharBusca}  className="modal-dark">
+        <Modal.Header closeButton>
+          <Modal.Title>Buscar Livro</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+        <Form className="form-dark">
+         <Form.Group className="mb-3" >
+            <Form.Label>Titulo</Form.Label>
+            <Form.Control type="text" placeholder="Titulo da Obra" value={this.state.nomeBusca} onChange={(e) =>this.setState({ nomeBusca: e.target.value })} />
+          </Form.Group>
+          <Form.Group className="mb-3" >
+            <Form.Label>Autor</Form.Label>
+            <Form.Control type="text" placeholder="Autor" value={this.state.autorBusca} onChange={(e) => this.setState({ autorBusca: e.target.value })} />
+          </Form.Group>
+            </Form>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="primary" onClick={this.submitBusca} style={{ marginLeft: '20px' }}>
+            Buscar
           </Button>
         </Modal.Footer>
       </Modal>

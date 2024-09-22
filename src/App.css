@@ -19,3 +19,8 @@
     color: White; /* Cor do texto */
   }
   
+  .dark-theme {
+    background-color: #343a40; /* Um cinza escuro */
+    color: white; /* Texto branco */
+    min-height: 100vh; /* Garante que o fundo cubra a altura total da tela */
+  }
