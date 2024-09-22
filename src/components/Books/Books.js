@@ -188,7 +188,7 @@ class Books extends React.Component{
                         <Form.Label>Editora</Form.Label>
                         <Form.Control type="text" placeholder="Editora" value={this.state.editora} onChange={this.atualizaEditora}/>
                     </Form.Group>
-                    <Button variant="primary" type="submit" onClick={this.submit}>
+                    <Button variant="primary" type="submit">
                         Salvar
                     </Button>
                 </Form>
