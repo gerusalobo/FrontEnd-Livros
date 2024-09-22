@@ -198,13 +198,15 @@ class Books extends React.Component {
         this.updateLivros(livro,idupdate);
     }
     // Limpa os campos do formulário
-    this.reset();
+    this.fecharCadastro();
   }
 
   fecharCadastro = () => {
     this.setState({
         telaCadastro: false
-  });}
+  });
+    this.reset();
+}
 
   abrirCadastro = () => {
     this.setState({
@@ -221,7 +223,6 @@ class Books extends React.Component {
         paginas: '',
         editora: ''
       });
-    this.fecharCadastro();
   }
 
   // Método renderiza o formulário e a tabela de livros
@@ -265,7 +266,7 @@ class Books extends React.Component {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={this.reset}>
+          <Button variant="secondary" onClick={this.fecharCadastro}>
             Fechar
           </Button>
           <Button variant="primary" onClick={this.submit}>
