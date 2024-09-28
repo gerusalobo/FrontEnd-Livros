@@ -8,13 +8,18 @@ A aplicação exige autenticação em tela de login para acesso a tela de gerenc
 
 
 
-## URL's de Acesso
+## Acesso a Aplicação
 
 A Aplicação está ativa como um serviço em um servidor linux Mint local com o MongoDB no Atlas.
 
 Url de Acesso a Aplicação:
 
 http://sol.librian.info:3001
+
+Credenciais de Acesso:
+
+username: teste
+password: XPe4nqo54ent6!hDkairn#76mdj3os1
 
 
 
@@ -168,15 +173,23 @@ Além dos botões já apresentados, o botão Excluir permite a exclusão do livr
    npm install
    ```
 
-2. **Acessar a documentação da API**:
+2. **API**:
 
-   API de acesso:
+   Caso se deseje usar a API ativa, seguem os links de acesso e documentação:
 
    http://sol.librian.info:3000/livros/
 
    http://sol.librian.info:3000/api-docs/
 
-   Ajustar no package-json o proxy para http://sol.librian.info:3000.
+   Para esse uso, ajustar no package.json o endereço do proxy para: http://sol.librian.info:3000
+
+   
+
+   Caso se deseje montar a solução completa de forma local, acessar o repositório: https://github.com/gerusalobo/API-Livros
+
+   E fazer a instalação da solução de API, com a configuração do mongodb, conforme documentação disponibilizada.
+
+   E para a aplicação React,  ajustar no package.json o endereço do proxy para: http://localhost:3000
 
    
 
