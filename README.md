@@ -82,11 +82,11 @@ O componente `Home` é uma página de autenticação em React que utiliza o `Aut
 
 A tela inicial do sistema é a tela de Login.
 
-![](.\img\Captura de tela 2024-09-28 141636.png)
+![](.\img\Capturadetela2024-09-28141636.png)
 
 Sem credenciais válidas inseridas, não é possível acessar o sistema.
 
-![](./img/Captura de tela 2024-09-28 142101.png)
+![](./img/Capturadetela2024-09-28142101.png)
 
 Há uma proteção de Rotas, que redireciona para a tela de login em caso de tentativa de acesso a rota sem autenticação.
 
@@ -125,31 +125,31 @@ O componente `Books` é um componente React que gerencia a exibição, criação
 
 A tela principal do sistema é a tela Books.
 
-![](./img/Captura de tela 2024-09-28 145315.png)
+![](./img/Capturadetela2024-09-28145315.png)
 
 Nessa tela é possível através dos botões:
 
 Novo Livro: abre a tela para registro de um novo Livro, através no Modal:
 
-![](./img/Captura de tela 2024-09-28 145559.png)
+![](./img/Capturadetela2024-09-28145559.png)
 
 
 
 Botão Atualizar: Abre a tela de Atualização de Livros para atualização dos dados do livro:
 
-![](./img/Captura de tela 2024-09-28 145657.png)
+![](./img/Capturadetela2024-09-28145657.png)
 
 
 
 O botão Buscar Livro, abre a tela de Buscar Livro e permite criar filtros por Titulo, Autor, Gênero, Editora e Quantidade de Páginas.
 
-![](./img/Captura de tela 2024-09-28 150230.png)
+![](./img/Capturadetela2024-09-28150230.png)
 
 Ao indicar o nome total ou parcial de autor, editora, gênero, titulo ou a quantidade mínima de páginas, é feito um novo Get com as condições indicadas, e a lista de livros é renderizada com os dados.
 
 Fazendo uma busca de Autor: "James":
 
-![](./img/Captura de tela 2024-09-28 150540.png)
+![](./img/Capturadetela2024-09-28150540.png)
 
 Para mostrar todos os livros novamente, é necessário clicar no botão Reset Busca.
 
