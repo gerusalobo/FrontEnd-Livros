@@ -200,6 +200,9 @@ Além dos botões já apresentados, o botão Excluir permite a exclusão do livr
    npm start
    ```
 
+4. **Acesso a Aplicação**:
+
+  Caso rode a aplicação de forma local, o acesso será através da url: http://localhost:3001
    
 ## Ambientes Utilizados no Desenvolvimento
 
