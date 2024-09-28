@@ -84,6 +84,7 @@ A tela inicial do sistema é a tela de Login.
 
 ![](.\img\Capturadetela2024-09-28141636.png)
 
+
 Sem credenciais válidas inseridas, não é possível acessar o sistema.
 
 ![](./img/Capturadetela2024-09-28142101.png)
