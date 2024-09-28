@@ -301,7 +301,7 @@ class Books extends React.Component {
                 <td>{book.editora}</td>
                 <td>
                   <Button variant="primary" onClick={() => this.getLivrosbyId(book._id)} style={{marginLeft: '10px'}} >Atualizar</Button>{' '}
-                  <Button variant="danger" onClick={() => this.deleteLivros(book._id)} style={{marginTop: '3px', marginLeft: '15px'}}>Excluir</Button>{' '}
+                  <Button variant="danger" onClick={() => this.deleteLivros(book._id)} style={{marginTop: '5px', marginLeft: '15px'}}>Excluir</Button>{' '}
                 </td>
               </tr>
             )
