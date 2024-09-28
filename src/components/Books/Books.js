@@ -364,7 +364,6 @@ class Books extends React.Component {
           <Modal.Body>
             <Form className="form-dark" onSubmit={this.submit}>
               <Form.Group className="mb-3" controlId="formGridId">
-                <Form.Label>ID</Form.Label>
                 <Form.Control
                   type="text"
                   value={this.state.id}
