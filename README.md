@@ -168,18 +168,7 @@ Além dos botões já apresentados, o botão Excluir permite a exclusão do livr
    npm install
    ```
 
-   
-
-2. **Executar o servidor**:
-
-   ```
-   bash
-   npm start
-   ```
-
-   
-
-3. **Acessar a documentação da API**:
+2. **Acessar a documentação da API**:
 
    API de acesso:
 
@@ -187,10 +176,19 @@ Além dos botões já apresentados, o botão Excluir permite a exclusão do livr
 
    http://sol.librian.info:3000/api-docs/
 
+   Ajustar no package-json o proxy para http://sol.librian.info:3000.
 
+   
 
+3. **Executar o servidor**:
+
+   ```
+   bash
+   npm start
+   ```
+
+   
 ## Ambientes Utilizados no Desenvolvimento
-
 
 
 - O desenvolvimento foi realizado usando o VSCode em máquina Windows 11 com acesso a API via rede local.
