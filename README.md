@@ -82,7 +82,7 @@ O componente `Home` é uma página de autenticação em React que utiliza o `Aut
 
 A tela inicial do sistema é a tela de Login.
 
-![](.\img\img28141636.png)
+![](./img/img28141636.png)
 
 
 Sem credenciais válidas inseridas, não é possível acessar o sistema.
