@@ -1,24 +1,46 @@
-// App.js
+// src/App.js
+import React from 'react';
 import './App.css';
-import Home from './components/Home/Home';
+import Home from './components/Home/Home'; // Atualizado para Home
 import Books from './components/Books/Books';
-import Header from './components/Header/header';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Header from './components/Header/Header';
+import AuthProvider from './context/AuthProvider';
+import AuthContext from './context/AuthContext';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="App">
+    <AuthProvider>
       <BrowserRouter>
-        <Header /> {/* O Header agora contém o título */}
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Books" element={<Books />} />
+          <Route path="/login" element={<Home />} /> {/* Página de Login */}
+          <Route
+            path="/Books"
+            element={
+              <PrivateRoute>
+                <Header />
+                <Books />
+              </PrivateRoute>
+            }
+          />
+          <Route path="/" element={<Navigate to="/login" replace />} />
+          {/* Adicione outras rotas protegidas aqui */}
         </Routes>
       </BrowserRouter>
-    </div>
+    </AuthProvider>
   );
 }
 
-export default App;
+// Componente para proteger rotas
+const PrivateRoute = ({ children }) => {
+  return (
+    <AuthContext.Consumer>
+      {({ isAuthenticated }) =>
+        isAuthenticated ? children : <Navigate to="/login" replace />
+      }
+    </AuthContext.Consumer>
+  );
+};
 
+export default App;
