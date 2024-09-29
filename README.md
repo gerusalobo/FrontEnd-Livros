@@ -8,6 +8,9 @@ A aplicação exige autenticação em tela de login para acesso a tela de gerenc
 
 Vídeo de Apresentação da Solução: https://youtu.be/cdRwEPjCCrA
 
+![](./img/img174942.png)
+
+
 
 ## Acesso a Aplicação
 
@@ -85,12 +88,12 @@ O componente `Home` é uma página de autenticação em React que utiliza o `Aut
 
 A tela inicial do sistema é a tela de Login.
 
-![](./img/img28141636.png)
+![](./img/img174345.png)
 
 
 Sem credenciais válidas inseridas, não é possível acessar o sistema.
 
-![](./img/Capturadetela2024-09-28142101.png)
+<img src="./img/img175136.png" style="zoom:75%;" />
 
 Há uma proteção de Rotas, que redireciona para a tela de login em caso de tentativa de acesso a rota sem autenticação.
 
@@ -129,7 +132,7 @@ O componente `Books` é um componente React que gerencia a exibição, criação
 
 A tela principal do sistema é a tela Books.
 
-![](./img/Capturadetela2024-09-28145315.png)
+![](./img/img174402.png)
 
 Nessa tela é possível através dos botões:
 
@@ -141,19 +144,17 @@ Novo Livro: abre a tela para registro de um novo Livro, através no Modal:
 
 Botão Atualizar: Abre a tela de Atualização de Livros para atualização dos dados do livro:
 
-![](./img/Capturadetela2024-09-28145657.png)
-
-
+![](./img/img174428.png)
 
 O botão Buscar Livro, abre a tela de Buscar Livro e permite criar filtros por Titulo, Autor, Gênero, Editora e Quantidade de Páginas.
 
-![](./img/Capturadetela2024-09-28150230.png)
+![](./img/img174445.png)
 
 Ao indicar o nome total ou parcial de autor, editora, gênero, titulo ou a quantidade mínima de páginas, é feito um novo Get com as condições indicadas, e a lista de livros é renderizada com os dados.
 
-Fazendo uma busca de Autor: "James":
+Fazendo uma busca de Autor: "ja":
 
-![](./img/Capturadetela2024-09-28150540.png)
+![](./img/img174453.png)
 
 Para mostrar todos os livros novamente, é necessário clicar no botão Reset Busca.
 
@@ -201,7 +202,7 @@ Além dos botões já apresentados, o botão Excluir permite a exclusão do livr
 4. **Acesso a Aplicação**:
 
   Caso rode a aplicação de forma local, o acesso será através da url: http://localhost:3001
-   
+
 ## Ambientes Utilizados no Desenvolvimento
 
 
