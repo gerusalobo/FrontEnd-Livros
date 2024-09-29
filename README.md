@@ -16,12 +16,6 @@ Url de Acesso a Aplicação:
 
 http://sol.librian.info:3001
 
-Credenciais de Acesso:
-
-- username: teste
-- password: XPe4nqo54ent6!hDkairn#76mdj3os1
-
-
 
 ## Funcionalidades
 
