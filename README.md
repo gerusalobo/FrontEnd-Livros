@@ -138,7 +138,7 @@ Nessa tela é possível através dos botões:
 
 Novo Livro: abre a tela para registro de um novo Livro, através no Modal:
 
-![](./img/Capturadetela2024-09-28145559.png)
+<img src="./img/Capturadetela2024-09-28145559.png" style="zoom:75%;" />
 
 
 
@@ -148,7 +148,7 @@ Botão Atualizar: Abre a tela de Atualização de Livros para atualização dos 
 
 O botão Buscar Livro, abre a tela de Buscar Livro e permite criar filtros por Titulo, Autor, Gênero, Editora e Quantidade de Páginas.
 
-![](./img/img174445.png)
+<img src="./img/img174445.png" style="zoom:75%;" />
 
 Ao indicar o nome total ou parcial de autor, editora, gênero, titulo ou a quantidade mínima de páginas, é feito um novo Get com as condições indicadas, e a lista de livros é renderizada com os dados.
 
