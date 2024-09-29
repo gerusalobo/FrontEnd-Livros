@@ -6,7 +6,7 @@ Este projeto foi desenvolvido com a intenção de fornecer uma interface amigáv
 
 A aplicação exige autenticação em tela de login para acesso a tela de gerenciamento, está conectada a [API - CRUD de Livros](https://github.com/gerusalobo/API-Livros) documentada previamente, a qual permite realizar as operações CRUD (Create, Read, Update, Delete) para gerenciar informações sobre livros, como nome, autor, gênero, número de páginas e editora.
 
-Segue vídeo de Apresentação da Solução: https://youtu.be/9pxOGwIDcyI
+Segue vídeo de Apresentação da Solução: https://youtu.be/cdRwEPjCCrA
 
 
 ## Acesso a Aplicação
