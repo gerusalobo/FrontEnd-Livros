@@ -2,9 +2,9 @@
 
 Um aplicativo em React que permite aos usuários visualizar e gerenciar uma coleção de livros. 
 
-Este projeto foi desenvolvido com a intenção de fornecer uma interface amigável e intuitiva para gerenciar informações sobre livros, incluindo nome, autor, gênero e editora., usando React, HTML, CSS e Bootstrap. 
+Este projeto foi desenvolvido com a intenção de fornecer uma interface amigável e intuitiva para gerenciar informações sobre livros, incluindo nome, autor, gênero e editora, usando React, HTML, CSS e Bootstrap. 
 
-A aplicação exige autenticação em tela de login para acesso a tela de gerenciamento, está conectada a [API - CRUD de Livros](https://github.com/gerusalobo/API-Livros) documentada previamente, a qual permite realizar as operações CRUD (Create, Read, Update, Delete) para gerenciar informações sobre livros, como nome, autor, gênero, número de páginas e editora.
+A aplicação exige autenticação em tela de login para acesso a tela de gerenciamento, está conectada a [API - CRUD de Livros](https://github.com/gerusalobo/API-Livros) documentada previamente via Autenticação Basic, a qual permite realizar as operações CRUD (Create, Read, Update, Delete) para gerenciar e buscar informações sobre livros, como nome, autor, gênero, número de páginas e editora.
 
 Vídeo de Apresentação da Solução: https://youtu.be/cdRwEPjCCrA
 
@@ -26,7 +26,6 @@ Credenciais de Acesso:
 
 - **Autenticação**: Sistema de login para garantir que apenas usuários autorizados possam acessar as informações. 
 - **Visualização de Livros**: Liste todos os livros disponíveis na coleção.
-
 - **Filtro de Livros**: Filtre a lista de livros por nome, autor, gênero, editora e número de páginas.
 - **CRUD**: Liste, Visualize, Crie, Edite e Exclua livros.
 - **Responsividade**: Interface adaptável para diferentes tamanhos de tela.
