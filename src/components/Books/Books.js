@@ -338,31 +338,31 @@ class Books extends React.Component {
       <div className="bg-dark text-white p-3" style={{ minHeight: '100vh' }}>
         {this.state.error && <Alert variant="danger">{this.state.error}</Alert>}
         <div className="d-flex justify-content-end mb-3" style={{ marginTop: '20px', marginBottom: '20px' }}>
-          <Button variant="primary" onClick={this.abrirCadastro} style={{ marginRight: '100px' }}>
+          <Button variant="secondary" onClick={this.abrirCadastro} style={{ marginRight: '2%' }}>
             Novo Livro
           </Button>
-          <Button variant="secondary" onClick={this.abrirBusca} style={{ marginRight: '20px' }}>
+          <Button variant="secondary" onClick={this.abrirBusca} style={{ marginRight: '2%' }}>
             Buscar Livro
           </Button>
           <Button
             variant="secondary"
             onClick={() => { this.getLivros(); this.fecharBusca(); }}
-            style={{ marginRight: '30px' }}
+            style={{ marginRight: '2%' }}
           >
             Reset Busca
           </Button>
-          <Button variant="light" onClick={this.logout}>
+          <Button variant="secondary" onClick={this.logout}>
             Logout
           </Button>
         </div>
 
         {/* Formulário de criação de livros */}
-        <Modal show={this.state.telaCadastro} onHide={this.fecharCadastro} className="modal-dark">
+        <Modal show={this.state.telaCadastro} onHide={this.fecharCadastro} className="modal-dark" >
           <Modal.Header closeButton>
             <Modal.Title>Registro de Livro</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <Form className="form-dark" onSubmit={this.submit}>
+            <Form className="form-dark" onSubmit={this.submit} >
               <Form.Group className="mb-3" controlId="formGridId">
                 <Form.Control
                   type="text"

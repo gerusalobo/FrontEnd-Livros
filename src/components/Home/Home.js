@@ -41,22 +41,12 @@ class Home extends Component {
   render() {
     return (
       <div className="home-container">
-
-    <div className="image-section" style={{ textAlign: 'center' }}>
-
-        <img src="/clipart2755190.png" alt="" style={{ width: '50%', height: 'auto' }} />
-                {/* Título dentro da seção da imagem */}
-        <h1 style={{ color: 'grey', marginTop: '50px', fontSize: '30px'}}>
-          Seu Database de Livros
-        </h1>
-      </div>
-        
-        <div className="welcome-section">
-          <h2 style={{ color: 'white', marginBottom: '100px', fontSize: '60px' }}>Books Database</h2>
+            <div className="image-section">
+          <h2 style={{ color: 'white', marginBottom: '15%', fontSize: '400%' }}>Books Database</h2>
           
           {this.state.error && <Alert variant="danger">{this.state.error}</Alert>}
 
-          <Form onSubmit={this.handleSubmit} className="bg-light p-4 rounded" style={{ maxWidth: '400px' }}>
+          <Form onSubmit={this.handleSubmit} className="form-dark" style={{ maxWidth: '400px' }}>
             <Form.Group className="mb-3" controlId="formBasicUsername">
               <Form.Label>Nome de Usuário</Form.Label>
               <Form.Control
@@ -80,11 +70,22 @@ class Home extends Component {
                 required
               />
             </Form.Group>
-            <Button variant="primary" type="submit" className="w-100">
+            <Button variant="dark" type="submit" className="w-100">
               Entrar
             </Button>
           </Form>
         </div>
+
+    <div className="welcome-section" style={{ textAlign: 'center' }}>
+
+        <img src="/clipart2755190.png" alt="" style={{ width: '50%', height: 'auto' }} />
+                {/* Título dentro da seção da imagem */}
+        <h1 style={{ color: 'grey', marginTop: '10%', fontSize: '200%'}}>
+          Seu Database de Livros
+        </h1>
+      </div>
+        
+    
       </div>
     );
   }

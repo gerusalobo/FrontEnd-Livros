@@ -30,6 +30,8 @@
     display: flex; /* Usa flexbox para layout horizontal */
     background-color: black; /* Cor de fundo do Header */
     padding: 10px; /* Espaçamento interno */
+    flex: 0 0 60%; /* 60% da largura para o título */
+    color: white; /* Cor do texto do título */
   }
   
   .header-title {
@@ -64,17 +66,16 @@
   }
   
   .welcome-section {
-    flex: 0 0 40%; /* 40% da largura para a seção de boas-vindas */
+    flex: 0 0 50%; /* 40% da largura para a seção de boas-vindas */
     background-color: rgb(30, 33, 35); /* Cor de fundo da seção de boas-vindas */
     display: flex;
     flex-direction: column; /* Coloca os elementos verticalmente */
     justify-content: center; /* Centraliza verticalmente */
     align-items: center; /* Centraliza horizontalmente */
-    padding: 20px; /* Espaçamento interno */
   }
   
   .image-section {
-    flex: 0 0 60%; /* 60% da largura para a imagem */
+    flex: 0 0 50%; /* 60% da largura para a imagem */
     display: flex;
     flex-direction: column; /* Coloca os itens em coluna */
     justify-content: center; /* Centraliza verticalmente */
