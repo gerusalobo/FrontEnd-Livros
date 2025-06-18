@@ -11,20 +11,6 @@ Vídeo de Apresentação da Solução: https://youtu.be/cdRwEPjCCrA
 ![](./img/img174942.png)
 
 
-
-## Acesso a Aplicação
-
-A Aplicação está ativa como um serviço em um servidor linux Mint local com o MongoDB no Atlas.
-
-Url de Acesso a Aplicação:
-
-http://sol.librian.info:3001
-
-Credenciais de Acesso:
-- username: teste
-- password: XPe4nqo54ent6!hDkairn#76mdj3os1
-
-
 ## Funcionalidades
 
 - **Autenticação**: Sistema de login para garantir que apenas usuários autorizados possam acessar as informações. 
@@ -174,17 +160,7 @@ Além dos botões já apresentados, o botão Excluir permite a exclusão do livr
 
 2. **API**:
 
-   Caso se deseje usar a API ativa, seguem os links de acesso e documentação:
-
-   http://sol.librian.info:3000/livros/
-
-   http://sol.librian.info:3000/api-docs/
-
-   Para esse uso, ajustar no package.json o endereço do proxy para: http://sol.librian.info:3000
-
-   
-
-   Caso se deseje montar a solução completa de forma local, acessar o repositório: https://github.com/gerusalobo/API-Livros
+   Para montar a solução completa de forma local, acessar o repositório: https://github.com/gerusalobo/API-Livros
 
    E fazer a instalação da solução de API, com a configuração do mongodb, conforme documentação disponibilizada.
 
